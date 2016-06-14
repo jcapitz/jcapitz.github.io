@@ -78,6 +78,7 @@ Juan Carlos Apitz            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</p>
 </div>
 </div>
 </div>
@@ -86,7 +87,6 @@ Juan Carlos Apitz            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Fisher-Scoring">Fisher Scoring<a class="anchor-link" href="#Fisher-Scoring">¶</a></h4><p>To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</p>
 $$U(\vec{\theta})=
 \begin{pmatrix}
 \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\
@@ -100,6 +100,7 @@ $$U(\vec{\theta})=
 \dfrac{n}{\sigma^2} & 0 \\ 
 0 & \dfrac{n}{2(\sigma^2)^2} 
 \end{bmatrix}$$</p>
+<p>The MLE estimate is given by $$\hat{\theta}=\theta_0+I^{-1}(\vec{\theta})U(\vec{\theta})$$</p>
                     <a class="btn btn-default btn-xs" href="/fisher-score.html">more ...</a>
                 </div>
             </article>
