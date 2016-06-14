@@ -79,7 +79,7 @@ Juan Carlos Apitz            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Fisher-Scoring">Fisher Scoring<a class="anchor-link" href="#Fisher-Scoring">¶</a></h4><p><strong>To implement this exercise we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</strong></p>
+<h4 id="Fisher-Scoring">Fisher Scoring<a class="anchor-link" href="#Fisher-Scoring">¶</a></h4><p>To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</p>
 $$U(\vec{\theta})=
 \begin{pmatrix}
 \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\
@@ -88,12 +88,11 @@ $$U(\vec{\theta})=
 =\begin{pmatrix}
 \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ 
 \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} 
-\end{pmatrix}$$<p>The information matrix is: $I(\vec{\theta})=-E[H(\vec{\theta})]=
+\end{pmatrix}$$<p>The information matrix is: $$I(\vec{\theta})=-E[H(\vec{\theta})]=
 \begin{bmatrix}
 \dfrac{n}{\sigma^2} & 0 \\ 
 0 & \dfrac{n}{2(\sigma^2)^2} 
-\end{bmatrix}$\
-The MLE estimate is given by $\hat{\theta}=\theta_0+I^{-1}(\vec{\theta})U(\vec{\theta})$</p>
+\end{bmatrix}$$</p>
                     <a class="btn btn-default btn-xs" href="/fisher-score.html">more ...</a>
                 </div>
             </article>

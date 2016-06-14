@@ -12,13 +12,13 @@
 <link rel="canonical" href="/fisher-score.html">
 
         <meta name="author" content="Juan Carlos Apitz" />
-        <meta name="description" content="Fisher Scoring¶To implement this exercise we need to find the score vector and the information matrix of the normal distribution&#39;s log-likelihood function. The score vector is: $$U(\vec{\theta})= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix is: $I(\vec{\theta})=-E[H(\vec{\theta})]= \begin{bmatrix} \dfrac{n}{\sigma^2} &amp; 0 \\ 0 &amp; \dfrac{n}{2(\sigma^2)^2} \end{bmatrix}$\ The MLE estimate is given by $\hat{\theta}=\theta_0+I^{-1}(\vec{\theta})U(\vec{\theta})$" />
+        <meta name="description" content="Fisher Scoring¶To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution&#39;s log-likelihood function. The score vector is: $$U(\vec{\theta})= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix is: $$I(\vec{\theta})=-E[H(\vec{\theta})]= \begin{bmatrix} \dfrac{n}{\sigma^2} &amp; 0 \\ 0 &amp; \dfrac{n}{2(\sigma^2)^2} \end{bmatrix}$$" />
 
         <meta property="og:site_name" content="Juan Carlos Apitz" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Fisher Score"/>
         <meta property="og:url" content="/fisher-score.html"/>
-        <meta property="og:description" content="Fisher Scoring¶To implement this exercise we need to find the score vector and the information matrix of the normal distribution&#39;s log-likelihood function. The score vector is: $$U(\vec{\theta})= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix is: $I(\vec{\theta})=-E[H(\vec{\theta})]= \begin{bmatrix} \dfrac{n}{\sigma^2} &amp; 0 \\ 0 &amp; \dfrac{n}{2(\sigma^2)^2} \end{bmatrix}$\ The MLE estimate is given by $\hat{\theta}=\theta_0+I^{-1}(\vec{\theta})U(\vec{\theta})$"/>
+        <meta property="og:description" content="Fisher Scoring¶To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution&#39;s log-likelihood function. The score vector is: $$U(\vec{\theta})= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix is: $$I(\vec{\theta})=-E[H(\vec{\theta})]= \begin{bmatrix} \dfrac{n}{\sigma^2} &amp; 0 \\ 0 &amp; \dfrac{n}{2(\sigma^2)^2} \end{bmatrix}$$"/>
         <meta property="article:published_time" content="2016-06-13" />
             <meta property="article:section" content="Statistics" />
             <meta property="article:author" content="Juan Carlos Apitz" />
@@ -1076,7 +1076,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Fisher-Scoring">Fisher Scoring<a class="anchor-link" href="#Fisher-Scoring">¶</a></h4><p><strong>To implement this exercise we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</strong></p>
+<h4 id="Fisher-Scoring">Fisher Scoring<a class="anchor-link" href="#Fisher-Scoring">¶</a></h4><p>To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</p>
 $$U(\vec{\theta})=
 \begin{pmatrix}
 \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\
@@ -1085,12 +1085,12 @@ $$U(\vec{\theta})=
 =\begin{pmatrix}
 \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ 
 \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} 
-\end{pmatrix}$$<p>The information matrix is: $I(\vec{\theta})=-E[H(\vec{\theta})]=
+\end{pmatrix}$$<p>The information matrix is: $$I(\vec{\theta})=-E[H(\vec{\theta})]=
 \begin{bmatrix}
 \dfrac{n}{\sigma^2} & 0 \\ 
 0 & \dfrac{n}{2(\sigma^2)^2} 
-\end{bmatrix}$\
-The MLE estimate is given by $\hat{\theta}=\theta_0+I^{-1}(\vec{\theta})U(\vec{\theta})$</p>
+\end{bmatrix}$$</p>
+<p>The MLE estimate is given by $$\hat{\theta}=\theta_0+I^{-1}(\vec{\theta})U(\vec{\theta})$$</p>
 </div>
 </div>
 </div>
