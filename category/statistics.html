@@ -69,43 +69,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2><a href="http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html#fisher-scoring-of-normally-distributed-univariate-data-with-python">Fisher Scoring of Normally Distributed Univariate Data with Python</a></h2>
     <p>
       Posted on Mon 13 June 2016 in <a href="http://jcapitz.github.io/category/statistics.html">Statistics</a>
-      &#8226; <a href="http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html#disqus_thread">Leave a comment</a>
     </p>
   </header>
   <div>
       
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fisher">Fisher<a class="anchor-link" href="#Fisher">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-$$U(\theta)=
-\begin{pmatrix}
-\dfrac{\partial \log \mathcal{L}}{\partial \mu}\\
-\dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} 
-\end{pmatrix}
-=\begin{pmatrix}
-\dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ 
-\dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} 
-\end{pmatrix}$$<p>The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:</p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
       <a class="btn" href="http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html#fisher-scoring-of-normally-distributed-univariate-data-with-python">Continue reading</a>
   </div>
 </article>
@@ -142,14 +111,5 @@ $$U(\theta)=
   "image": "/images/drchivins_small.png",
   "description": ""
 }
-</script><script type="text/javascript">
-    var disqus_shortname = 'jcapitz';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-</body>
+</script></body>
 </html>

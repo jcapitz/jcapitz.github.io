@@ -18,11 +18,11 @@
   <meta name="robots" content="index, follow" />
 
 <meta name="author" content="Juan Carlos Apitz" />
-<meta name="description" content="Fisher¶ To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is: $$U(\theta)= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:" />
+<meta name="description" content="" />
 <meta name="keywords" content="">
 <meta property="og:site_name" content="Juan Carlos Apitz"/>
 <meta property="og:title" content="Fisher Scoring of Normally Distributed Univariate Data with Python"/>
-<meta property="og:description" content="Fisher¶ To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is: $$U(\theta)= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:"/>
+<meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html"/>
 <meta property="og:type" content="article"/>
@@ -1044,6 +1044,17 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 </style>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="s">'python'</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1095,7 +1106,7 @@ $$I(\theta)=-E\left(H(\theta)\right)=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -1108,7 +1119,7 @@ $$I(\theta)=-E\left(H(\theta)\right)=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">n</span> <span class="o">=</span> <span class="mi">10000</span>
@@ -1121,7 +1132,7 @@ $$I(\theta)=-E\left(H(\theta)\right)=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># the histogram of the data</span>
@@ -1135,107 +1146,106 @@ $$I(\theta)=-E\left(H(\theta)\right)=
 <div class="output_area"><div class="prompt"></div>
 <div class="output_png output_subarea ">
 <img src="data:image/png;base64,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
-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
+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
+av1/Tjx3Q6WtjNUAAAAASUVORK5CYII=
 ">
 </img></div>
 </div>
@@ -1253,7 +1263,7 @@ oSBJahkKkqSWoSBJav1/+jl6/6HWQSUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">fisher_scoring</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
@@ -1270,7 +1280,7 @@ oSBJahkKkqSWoSBJav1/+jl6/6HWQSUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">fisher_solver</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">max_iter</span> <span class="o">=</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-16</span><span class="p">):</span>
@@ -1296,7 +1306,7 @@ oSBJahkKkqSWoSBJav1/+jl6/6HWQSUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#initial parameter value</span>
@@ -1312,7 +1322,7 @@ oSBJahkKkqSWoSBJav1/+jl6/6HWQSUAAAAASUVORK5CYII=
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Fisher Scoring converged after 1 iterations.
-The estimate mean is 100.10 and the estimate standard deviation 14.91.
+The estimate mean is 99.93 and the estimate standard deviation 15.05.
 </pre>
 </div>
 </div>
@@ -1330,7 +1340,7 @@ The estimate mean is 100.10 and the estimate standard deviation 14.91.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">fisher_recursion</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">tol</span><span class="p">):</span>
@@ -1355,7 +1365,7 @@ The estimate mean is 100.10 and the estimate standard deviation 14.91.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">theta_recursion</span> <span class="o">=</span> <span class="n">fisher_recursion</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">theta_0</span><span class="p">,</span><span class="mf">1e-6</span><span class="p">)</span>
@@ -1367,7 +1377,7 @@ The estimate mean is 100.10 and the estimate standard deviation 14.91.
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The estimate mean is 100.10 and the estimate standard deviation 14.91.
+<pre>The estimate mean is 99.93 and the estimate standard deviation 15.05.
 </pre>
 </div>
 </div>
@@ -1423,16 +1433,6 @@ The estimate mean is 100.10 and the estimate standard deviation 14.91.
     <div class="addthis_native_toolbox"></div>
     <div class="addthis_sharing_toolbox"></div>
   </div>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'jcapitz';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </article>
 
     <footer>
@@ -1470,7 +1470,7 @@ The estimate mean is 100.10 and the estimate standard deviation 14.91.
   },
   "image": "/images/drchivins_small.png",
   "url": "http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html",
-  "description": "Fisher¶ To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is: $$U(\theta)= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:"
+  "description": ""
 }
 </script></body>
 </html>
