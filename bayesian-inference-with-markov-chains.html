@@ -18,11 +18,11 @@
   <meta name="robots" content="index, follow" />
 
 <meta name="author" content="Juan Carlos Apitz" />
-<meta name="description" content="" />
+<meta name="description" content="Sometimes we may want to understand the behavior of parameters we seek to analyze. For example, the proportion of students that pass or fail a particular class or the proportion of voters who support a particular candidate. A useful approach is to simulate the behavior of this proportion parameter and make inferences about its distribution. The following example illustrates how we can use Markov Chains to learn about a parameter's distribution." />
 <meta name="keywords" content="">
 <meta property="og:site_name" content="Juan Carlos Apitz"/>
 <meta property="og:title" content="Bayesian Inference with Markov Chains"/>
-<meta property="og:description" content=""/>
+<meta property="og:description" content="Sometimes we may want to understand the behavior of parameters we seek to analyze. For example, the proportion of students that pass or fail a particular class or the proportion of voters who support a particular candidate. A useful approach is to simulate the behavior of this proportion parameter and make inferences about its distribution. The following example illustrates how we can use Markov Chains to learn about a parameter's distribution."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jcapitz.github.io/bayesian-inference-with-markov-chains.html"/>
 <meta property="og:type" content="article"/>
@@ -1044,17 +1044,6 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 </style>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c">#</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1131,7 +1120,7 @@ h6:hover .anchor-link {
 <h3 id="Bayesian-Inference-and-Estimation">Bayesian Inference and Estimation<a class="anchor-link" href="#Bayesian-Inference-and-Estimation">¶</a></h3><p>To generate a Markov chain using the Metropolis sampler consider the model where the data follows a Bernoulli process and the parameter is given by the beta cojugate prior:</p>
 $$ X_i\ |\ \theta \sim iid\ binomial,\ b(1,\theta) $$$$ \Theta \sim beta(\alpha,\beta)$$<p>Here the conditional likelihood proportional to the following expression:</p>
 $$L(\theta\ |\ X) \propto \theta^{\alpha-1}(1-\theta)^{\beta-1}$$<p>with $\alpha = 1 + \sum_{i=1}^n x_i$ and $\beta = n + 1 - \sum_{i=1}^n x_i$. Thus, the likelihood function is really proportional to the binomial pmf:</p>
-$$L(\theta\ |\ X)\propto\theta^{\sum x_i}(1-\theta)^{n-\sum x_i}$$<p>For details on the derivation of conjugate families <a href="https://en.wikipedia.org/wiki/Conjugate_prior">see this article</a>.</p>
+$$L(\theta\ |\ X)\propto\theta^{\sum x_i}(1-\theta)^{n-\sum x_i}$$<p>For details on the derivation of conjugate families <a href="https://en.wikipedia.org/wiki/Conjugate_prior">see this article</a>{:target="_blank"}.</p>
 <p><strong>Metropolis Sampler</strong></p>
 <p>With the Metropolis sampler we accept a point $\Theta_t=Y$ with probability:</p>
 $$\alpha\left(\Theta,Y\right) = min\left\{1,\dfrac{L(y)}{L(\theta_{t-1})}\right\}$$<p>Here $Y$ has the prior $Unif(0,1)$ as its distribution. Thus at each step $t$ we draw a $y_t$ and a $u_t \sim Unif(0,1)$, and calculate $\alpha\left(\Theta,Y\right)$. If $u_t \leq \alpha\left(\theta_{t-1},y_t\right)$ we set $\theta_t = y_t$ else $\theta_t = \theta_{t-1}$</p>
@@ -3115,7 +3104,7 @@ Mf4fg4Hhk+OcXaIAAAAASUVORK5CYII=
   },
   "image": "/images/drchivins_small.png",
   "url": "http://jcapitz.github.io/bayesian-inference-with-markov-chains.html",
-  "description": ""
+  "description": "Sometimes we may want to understand the behavior of parameters we seek to analyze. For example, the proportion of students that pass or fail a particular class or the proportion of voters who support a particular candidate. A useful approach is to simulate the behavior of this proportion parameter and make inferences about its distribution. The following example illustrates how we can use Markov Chains to learn about a parameter's distribution."
 }
 </script></body>
 </html>
