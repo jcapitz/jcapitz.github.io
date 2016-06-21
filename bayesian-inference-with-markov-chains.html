@@ -1120,7 +1120,7 @@ h6:hover .anchor-link {
 <h3 id="Bayesian-Inference-and-Estimation">Bayesian Inference and Estimation<a class="anchor-link" href="#Bayesian-Inference-and-Estimation">¶</a></h3><p>To generate a Markov chain using the Metropolis sampler consider the model where the data follows a Bernoulli process and the parameter is given by the beta cojugate prior:</p>
 $$ X_i\ |\ \theta \sim iid\ binomial,\ b(1,\theta) $$$$ \Theta \sim beta(\alpha,\beta)$$<p>Here the conditional likelihood proportional to the following expression:</p>
 $$L(\theta\ |\ X) \propto \theta^{\alpha-1}(1-\theta)^{\beta-1}$$<p>with $\alpha = 1 + \sum_{i=1}^n x_i$ and $\beta = n + 1 - \sum_{i=1}^n x_i$. Thus, the likelihood function is really proportional to the binomial pmf:</p>
-$$L(\theta\ |\ X)\propto\theta^{\sum x_i}(1-\theta)^{n-\sum x_i}$$<p>For details on the derivation of conjugate families <a href="https://en.wikipedia.org/wiki/Conjugate_prior">see this article</a>{:target="_blank"}.</p>
+$$L(\theta\ |\ X)\propto\theta^{\sum x_i}(1-\theta)^{n-\sum x_i}$$<p>For details on the derivation of conjugate families <a href="https://en.wikipedia.org/wiki/Conjugate_prior" target="_blank">see this article</a>.</p>
 <p><strong>Metropolis Sampler</strong></p>
 <p>With the Metropolis sampler we accept a point $\Theta_t=Y$ with probability:</p>
 $$\alpha\left(\Theta,Y\right) = min\left\{1,\dfrac{L(y)}{L(\theta_{t-1})}\right\}$$<p>Here $Y$ has the prior $Unif(0,1)$ as its distribution. Thus at each step $t$ we draw a $y_t$ and a $u_t \sim Unif(0,1)$, and calculate $\alpha\left(\Theta,Y\right)$. If $u_t \leq \alpha\left(\theta_{t-1},y_t\right)$ we set $\theta_t = y_t$ else $\theta_t = \theta_{t-1}$</p>
