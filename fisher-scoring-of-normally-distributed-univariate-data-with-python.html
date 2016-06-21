@@ -18,11 +18,11 @@
   <meta name="robots" content="index, follow" />
 
 <meta name="author" content="Juan Carlos Apitz" />
-<meta name="description" content="To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus." />
+<meta name="description" content="To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus. Start by loading numpy and pyplot:" />
 <meta name="keywords" content="">
 <meta property="og:site_name" content="Juan Carlos Apitz"/>
 <meta property="og:title" content="Fisher Scoring of Normally Distributed Univariate Data with Python"/>
-<meta property="og:description" content="To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus."/>
+<meta property="og:description" content="To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus. Start by loading numpy and pyplot:"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html"/>
 <meta property="og:type" content="article"/>
@@ -1050,6 +1050,7 @@ h6:hover .anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus.</p>
+<p>Start by loading numpy and pyplot:</p>
 </div>
 </div>
 </div>
@@ -1071,7 +1072,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is:</p>
+<p>With Fisher Scoring we can estimate the parameter $\theta^T = \left(\mu,\sigma\right)$ by finding the score vector and the information matrix of the normal distribution's log-likelihood function and then use an iterative process, similar to gradient ascent, in order to find the maximizer $\theta^*$.</p>
 </div>
 </div>
 </div>
@@ -1451,7 +1452,7 @@ The estimate mean is 99.78 and the estimate standard deviation 14.97.
   },
   "image": "/images/drchivins_small.png",
   "url": "http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html",
-  "description": "To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus."
+  "description": "To implement Fisher Scoring we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. We can easily solve this optimization problem using python and some basic calculus. Start by loading numpy and pyplot:"
 }
 </script></body>
 </html>
