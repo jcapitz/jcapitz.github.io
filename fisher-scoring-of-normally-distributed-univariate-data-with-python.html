@@ -18,11 +18,11 @@
   <meta name="robots" content="index, follow" />
 
 <meta name="author" content="Juan Carlos Apitz" />
-<meta name="description" content="" />
+<meta name="description" content="To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is: $$U(\theta)= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:" />
 <meta name="keywords" content="">
 <meta property="og:site_name" content="Juan Carlos Apitz"/>
 <meta property="og:title" content="Fisher Scoring of Normally Distributed Univariate Data with Python"/>
-<meta property="og:description" content=""/>
+<meta property="og:description" content="To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is: $$U(\theta)= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html"/>
 <meta property="og:type" content="article"/>
@@ -1044,26 +1044,6 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 </style>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c">#powered by jupyter</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fisher">Fisher<a class="anchor-link" href="#Fisher">¶</a></h3>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1462,7 +1442,7 @@ The estimate mean is 99.96 and the estimate standard deviation 14.96.
   },
   "image": "/images/drchivins_small.png",
   "url": "http://jcapitz.github.io/fisher-scoring-of-normally-distributed-univariate-data-with-python.html",
-  "description": ""
+  "description": "To implement Fisher Scoring to estimate $\theta^T = \left(\mu,\sigma\right)$ we need to find the score vector and the information matrix of the normal distribution's log-likelihood function. The score vector is: $$U(\theta)= \begin{pmatrix} \dfrac{\partial \log \mathcal{L}}{\partial \mu}\\ \dfrac{\partial \log \mathcal{L}}{\partial \sigma^2} \end{pmatrix} =\begin{pmatrix} \dfrac{\sum_{i=1}^n x_i - n\mu}{\sigma^2} \\ \dfrac{-n}{2\sigma^2}+\dfrac{\sum_{i=1}^n(x_i-\mu)^2}{2(\sigma^2)^2} \end{pmatrix}$$The information matrix, $I(\theta)$, is given by taking the negative expectation of the Hessian $H(\theta)$:"
 }
 </script></body>
 </html>
